@@ -15,13 +15,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 591px;
-    width: 528px;
+    // height: 591px;
+    max-width: 528px;
+    width: 100%;
     background-color: var(--background-color-white);
     padding: 40px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 480px) and (max-width: 1199px)  {width: 450px; }
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);}}
 
@@ -117,12 +119,16 @@ padding: 12px 16px;
 resize: none;}
 
 .form-privacy {
- font-size: 14px;
+font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: var(--primary-text-color);
 display: flex;
 align-items: center;
+@media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+}
 }
    
 .modal-check-icon {
@@ -135,6 +141,8 @@ align-items: center;
     justify-content: center;
     border: 1px solid var(--title-text-color);
     border-radius: 2px;
+    @media screen and (min-width: 480px) and (max-width: 1199px) {margin-left: 0px;} 
+    
         
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -164,7 +172,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin: 0 auto;
-margin-bottom: 40px;
+
 /* display: inline-block;
 align-items: center;
 text-align: center; */
